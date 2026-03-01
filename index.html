@@ -63,14 +63,34 @@
         <div class="container mt-5 pt-4">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10">
-                    <div class="card shadow">
+                    <div class="card shadow night-mode" id="about-card">
                         <div class="card-body p-5">
-                            <h2 class="card-title mb-4">Sobre mí</h2>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h2 class="card-title mb-0">Sobre mí</h2>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="theme-toggle" onchange="toggleAboutCardTheme()">
+                                    <label class="form-check-label" for="theme-toggle">
+                                        <span id="theme-label">🌙</span>
+                                    </label>
+                                </div>
+                            </div>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Hola, mi nombre es Nicolás, tengo 31 años, soy baterista desde chico y soy fanático de Luceros el Ojo Daltónico, lo llevo tatuado con mi viejo. Es una banda que me llega al alma, me atraviesa y me identifica de un monton de maneras.
+<br><br>
+Cuando me enteré lo del Ruso, me comuniqué con ustedes para expresar mi interés en sumarme a la banda. Entiendo que todavía no estén en búsqueda porque es algo reciente, pero sentí que tenía que adelantarme a la jugada, mostrar interés y esperar mi oportunidad.
+<br><br>
+Tengo experiencia, estoy equipado primer nivel y siempre me manejé con criterio, responsabilidad y profesionalismo sin importar el contexto. me encanta la música y la batería, entiendo y disfruto mi rol: tocar para el tema, aportar solidez y sostener a la banda desde mi lugar. Me sé aprox. el 70% de los temas del repertorio, con y sin click.
+<br><br>
+Nunca pretendo ser soberbio, por favor no me tomen asi, mi idea es mostrar lo que tengo para ofrecerle a la banda.
+<br><br>
+Tengo movilidad propia, tiempo y muchas ganas. Soy un tipo sano, sencillo, tranquilo; todos los dias trato de ser un buen amigo, un buen hijo, un buen hermano y un buen batero.
+<br><br>
+Sinceamente, pienso que puedo ser el baterista ideal para este momento de la banda. Lo que les pido es que me escuchen antes de tomar una decisión. Que me digan “Nico, venite a la sala”, voy, tocamos unos temas y vemos qué pasa. Lo único que quiero es la oportunidad, que el mundo muestre su naipe más alto para mi as bajo la manga. 
+<br><br>
+Abrazo y gracias por llegar hasta acá.
                             </p>
                             <p class="card-text">
-                                Nunca pretendo ser soberbio, la idea es mostrar lo que tengo para ofrecerle a la banda.
+                                
                             </p>
                         </div>
                     </div>
@@ -81,17 +101,17 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100 equipment-card">
-                        <img src="https://rvb-img.reverb.com/i/s--dB8iSnqx--/quality=medium-low,height=800,width=800,fit=contain/lxug3ye98y2lgz7wuqj4.jpg" class="card-img" alt="Equipo 1">
+                        <img src="imagenes/recursos/bata.jpg" class="card-img" alt="Equipo 1">
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100 equipment-card">
-                        <img src="https://media.rainpos.com/12983/21_K_Custom_Hybrid_Top.jpg" class="card-img" alt="Equipo 2">
+                        <img src="imagenes/recursos/platos.jpg" class="card-img" alt="Equipo 2">
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100 equipment-card">
-                        <img src="https://rattleanddrum.com/cdn/shop/files/image_739fc7cd-4a2e-4005-90f3-bca29a3955b4.jpg?v=1736781963&width=1214" class="card-img" alt="Equipo 3">
+                        <img src="imagenes/recursos/tacho.jpg" class="card-img" alt="Equipo 3">
                     </div>
                 </div>
             </div>
@@ -101,7 +121,7 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkQbDtw0U_D7R_3Ial2dk_xkV3arw1ecwRQ&s" class="card-img-top" alt="Trabajo a remoto">
+                        <img src="imagenes/recursos/notebook.jpg" class="card-img-top" alt="Trabajo a remoto">
                         <div class="card-body">
                             <h5 class="card-title">100% para la banda</h5>
                             <p class="card-text">No tengo compromisos personales ni laborales estrictos. Soy programador (programé ésta página), laburo a remoto con mi notebook en horarios flex.</p>
@@ -110,7 +130,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_683310-MLA106045909830_022026-O.webp" class="card-img-top" alt="Transporte propio">
+                        <img src="imagenes/recursos/fiori.jpg" class="card-img-top" alt="Transporte propio">
                         <div class="card-body">
                             <h5 class="card-title">Transporte propio</h5>
                             <p class="card-text">&nbsp;</p>
@@ -119,7 +139,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <img src="https://www.infoviajera.com/wp-content/uploads/2023/04/Tiempo-renovacion-pasaporte-Argentina-4.jpg" class="card-img-top" alt="Pasaporte al día">
+                        <img src="imagenes/recursos/pasaporte.jpg" class="card-img-top" alt="Pasaporte al día">
                         <div class="card-body">
                             <h5 class="card-title">Pasaporte al día</h5>
                             <p class="card-text">&nbsp;</p>

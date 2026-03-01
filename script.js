@@ -62,6 +62,11 @@ function showView(viewName) {
         }
     });
     
+    // Si se muestra la vista "about", cargar el tema guardado
+    if (viewName === 'about') {
+        setTimeout(loadAboutCardTheme, 100);
+    }
+    
     // Scroll al inicio
     window.scrollTo(0, 0);
 }
@@ -119,6 +124,52 @@ function copyToClipboard(text, button) {
     });
 }
 
+// Función para cambiar entre modo día y modo noche en la carta Sobre mí
+function toggleAboutCardTheme() {
+    const card = document.getElementById('about-card');
+    const toggle = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-label');
+    
+    if (!card || !toggle) return;
+    
+    if (toggle.checked) {
+        // Modo día
+        card.classList.remove('night-mode');
+        card.classList.add('day-mode');
+        label.textContent = '☀️';
+        localStorage.setItem('aboutCardTheme', 'day');
+    } else {
+        // Modo noche
+        card.classList.remove('day-mode');
+        card.classList.add('night-mode');
+        label.textContent = '🌙';
+        localStorage.setItem('aboutCardTheme', 'night');
+    }
+}
+
+// Cargar tema guardado al iniciar
+function loadAboutCardTheme() {
+    const card = document.getElementById('about-card');
+    const toggle = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-label');
+    
+    if (!card || !toggle || !label) return;
+    
+    const savedTheme = localStorage.getItem('aboutCardTheme') || 'night';
+    
+    if (savedTheme === 'day') {
+        toggle.checked = true;
+        card.classList.remove('night-mode');
+        card.classList.add('day-mode');
+        label.textContent = '☀️';
+    } else {
+        toggle.checked = false;
+        card.classList.remove('day-mode');
+        card.classList.add('night-mode');
+        label.textContent = '🌙';
+    }
+}
+
 // Manejo del formulario de contacto
 document.addEventListener('DOMContentLoaded', function() {
     // Renderizar videos al cargar la página
@@ -126,4 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mostrar vista home por defecto
     showView('home');
+    
+    // Cargar tema guardado de la carta Sobre mí
+    setTimeout(loadAboutCardTheme, 100);
 });

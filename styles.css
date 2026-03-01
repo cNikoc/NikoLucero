@@ -282,15 +282,44 @@ footer {
 
 /* Tarjetas de Sobre mí */
 #about-view .row.justify-content-center .card {
-    background-color: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
     border: none;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 #about-view .row.justify-content-center .card:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Tema de la card principal de Sobre mí (solo #about-card) */
+#about-card {
+    --about-card-bg: rgba(0, 0, 0, 0.95);
+    --about-card-title: #ffffff;
+    --about-card-text: #f0f0f0;
+    background-color: var(--about-card-bg) !important;
+}
+
+#about-card .card-title {
+    color: var(--about-card-title) !important;
+}
+
+#about-card .card-text {
+    color: var(--about-card-text) !important;
+}
+
+/* Modo día */
+#about-card.day-mode {
+    --about-card-bg: rgba(255, 255, 255, 0.95);
+    --about-card-title: #000000;
+    --about-card-text: #111111;
+}
+
+/* Modo noche */
+#about-card.night-mode {
+    --about-card-bg: rgba(0, 0, 0, 0.95);
+    --about-card-title: #ffffff;
+    --about-card-text: #f0f0f0;
 }
 
 #about-view .card-img-top {
@@ -300,19 +329,33 @@ footer {
 }
 
 #about-view .row.justify-content-center .card-title {
-    color: #ffffff !important;
     font-weight: 600;
     font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
 }
 
 #about-view .row.justify-content-center .card-text {
-    color: #f0f0f0 !important;
     line-height: 1.9;
     font-size: 1.05rem;
     letter-spacing: 0.4px;
     font-weight: 400;
     margin-bottom: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para el toggle switch */
+#about-view .form-check-input {
+    width: 3rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+#about-view .form-check-label {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    user-select: none;
 }
 
 /* Estilos para las cartas pequeñas (Equipamiento y Otros) - mantener originales */
