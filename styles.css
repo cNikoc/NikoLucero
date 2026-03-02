@@ -504,13 +504,210 @@ footer {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
+    /* Body y view en móvil */
+    body {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    
+    .view {
+        min-height: calc(100vh - 110px);
+        margin-bottom: 60px;
+    }
+    
+    /* Navbar en móvil */
+    .navbar-brand {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-logo {
+        height: 40px;
+        max-width: 150px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+    
+    /* Hero section en móvil */
+    .hero-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    /* Tarjetas de Sobre mí en móvil */
+    #about-view .row.justify-content-center .card {
+        margin-bottom: 1rem;
+    }
+    
+    #about-view .row.justify-content-center .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    #about-view .row.justify-content-center .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    #about-view .row.justify-content-center .card-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        letter-spacing: 0.2px;
+    }
+    
+    /* Toggle switch en móvil */
+    #about-view .form-check-input {
+        width: 2.5rem;
+        height: 1.25rem;
+    }
+    
+    #about-view .form-check-label {
+        font-size: 1rem;
+        margin-left: 0.3rem;
+    }
+    
+    /* Cards de Equipamiento y Disponibilidad en móvil */
+    #about-view .row.g-4 {
+        margin-bottom: 1rem;
+    }
+    
+    #about-view .row.g-4 .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Galería en móvil */
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
     }
     
     .gallery-item-large {
         grid-column: span 1;
         grid-row: span 1;
+    }
+    
+    .gallery-item-large .gallery-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    /* Vista de Contacto en móvil */
+    #contact-view .hero-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    #contact-view .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    #contact-view .contact-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    #contact-view .contact-item .lead {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #contact-view .contact-item .btn {
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+    }
+    
+    /* Footer en móvil */
+    footer {
+        padding: 0.75rem 0 !important;
+        font-size: 0.85rem;
+    }
+    
+    /* Videos en móvil */
+    .video-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .video-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Container padding en móvil */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Títulos de sección en móvil */
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Ajustes para el toggle y título en móvil */
+    #about-view .d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+    
+    #about-view .form-check {
+        align-self: flex-end;
+    }
+}
+
+/* Responsive para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    body {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+    
+    .view {
+        min-height: calc(100vh - 100px);
+        margin-bottom: 55px;
+    }
+    
+    .navbar-logo {
+        height: 35px;
+        max-width: 120px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    #about-view .row.justify-content-center .card-body {
+        padding: 1rem !important;
+    }
+    
+    #about-view .row.justify-content-center .card-title {
+        font-size: 1.25rem;
+    }
+    
+    #about-view .row.justify-content-center .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 6px;
+    }
+    
+    #contact-view .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    footer {
+        font-size: 0.75rem;
+        padding: 0.5rem 0 !important;
     }
 }
 
