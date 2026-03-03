@@ -13,6 +13,12 @@ const videos = [
         thumbnail: 'https://img.youtube.com/vi/bnzdSKwx2nY/maxresdefault.jpg'
     },
     {
+        id: 'eA92H01F1QU', // Reemplaza con IDs reales de YouTube
+        title: 'Nigromante',
+        description: '',
+        thumbnail: 'https://img.youtube.com/vi/eA92H01F1QU/maxresdefault.jpg'
+    },
+    {
         id: 'XDzGqMJdvh8', // Reemplaza con IDs reales de YouTube
         title: 'El Espíritu Capicúa',
         description: '',
@@ -23,12 +29,6 @@ const videos = [
         title: 'Alunizando',
         description: '',
         thumbnail: 'https://img.youtube.com/vi/8kD3mwJkiKg/maxresdefault.jpg'
-    },
-    {
-        id: 'eA92H01F1QU', // Reemplaza con IDs reales de YouTube
-        title: 'Nigromante',
-        description: '',
-        thumbnail: 'https://img.youtube.com/vi/eA92H01F1QU/maxresdefault.jpg'
     }
 ];
 
