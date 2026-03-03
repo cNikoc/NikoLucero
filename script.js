@@ -67,6 +67,21 @@ function showView(viewName) {
         setTimeout(loadAboutCardTheme, 100);
     }
     
+    // Cerrar el menú hamburguesa en móvil
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        // Intentar usar la API de Bootstrap Collapse si está disponible
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+            bsCollapse.hide();
+        } else {
+            // Fallback: simplemente remover la clase show
+            navbarCollapse.classList.remove('show');
+        }
+    }
+    
     // Scroll al inicio
     window.scrollTo(0, 0);
 }
